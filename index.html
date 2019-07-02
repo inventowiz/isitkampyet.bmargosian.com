@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>is it Kamp yet?</title>
+
+    <!-- Core JavaScript Files -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/grayscale.js"></script>
+
+    <script src="date.js"></script>
+
+    <script>
+	    window.onload = function (){
+		if(in_range("07/25","08/02"))
+		    document.getElementById('maintext').innerHTML = "YES!!!";
+		else if(in_range("07/21","07/24"))
+		    document.getElementById('maintext').innerHTML = "Almost! KAMP PREP TIME!";
+		else if(in_range("07/08","07/19"))
+		    document.getElementById('maintext').innerHTML = "Soon! Less than two weeks!";
+		else if(in_range("07/19","07/20"))
+		    document.getElementById('maintext').innerHTML = "Tigers' game! Getting closer!";
+		else if(in_range("07/13","07/15"))
+		    document.getElementById('maintext').innerHTML = "POOL PARTY! But no.";
+		else
+		    document.getElementById('maintext').innerHTML = "Nope.";
+	    }
+	function in_range(start,end) {
+		var today = new Date();
+		var start_ts = new Date(start);
+		var end_ts = new Date(end);
+		return ((today >= start_ts) && (today <= end_ts));
+	}
+
+    </script>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    
+    <!-- Countdown Timer -->
+    <link rel="stylesheet" type="text/css" href="css/jquery.countdown.css"> 
+    <script type="text/javascript" src="js/jquery.plugin.js"></script> 
+    <script type="text/javascript" src="js/jquery.countdown.js"></script>
+
+    <!-- Fonts -->
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+    <!-- Custom Theme CSS -->
+    <link href="css/grayscale.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-custom">
+
+    <section class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+
+                        <h1 class="brand-heading">
+				<div id="maintext"></div>
+                        </h1>
+
+                        <div class="intro-text" id="defaultCountdown"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

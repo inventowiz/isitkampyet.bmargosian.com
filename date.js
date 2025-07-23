@@ -1,6 +1,6 @@
 $(function () {
 	var now = new Date();
-	var kampMonth = 7,kampDay = 26,kampYear = 0;
+	var kampMonth = 8,kampDay = 1,kampYear = 0;
 	if((now.getMonth() == (kampMonth-1) && now.getDate() > 28) ||
 		(now.getMonth() > (kampMonth-1))){
 		// use next year
